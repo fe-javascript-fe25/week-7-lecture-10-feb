@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="module" src="./scripts/index.js"></script>
+        <link rel="stylesheet" href="./styles/index.css" />
+        <script
+            src="https://kit.fontawesome.com/f300007e95.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>SWAPI - Star Wars Catalog</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header__wrapper">
+                <h1 class="header__title">Star Wars Catalog</h1>
+            </div>
+        </header>
+        <!-- MAIN -->
+        <main class="main">
+            <div class="main__wrapper">
+                <section class="main__container characters">
+                    <h2 class="characters__title">Characters</h2>
+                    <ul class="characters__list" id="charactersList">
+                        <li class="characters__list-item">Luke Skywalker</li>
+                        <li class="characters__list-item">Luke Skywalker</li>
+                        <li class="characters__list-item">Luke Skywalker</li>
+                        <li class="characters__list-item">Luke Skywalker</li>
+                        <li class="characters__list-item">Luke Skywalker</li>
+                        <li class="characters__list-item">Luke Skywalker</li>
+                        <li class="characters__list-item">Luke Skywalker</li>
+                        <li class="characters__list-item">Luke Skywalker</li>
+                    </ul>
+                    <section class="pagination">
+                        <i
+                            class="pagination__arrow fa-solid fa-chevron-left"
+                        ></i>
+                        <p class="pagination__indicator" id="pageIndicator">
+                            1 / 8
+                        </p>
+                        <i
+                            class="pagination__arrow fa-solid fa-chevron-right active"
+                        ></i>
+                    </section>
+                </section>
+                <section class="main__container details">
+                    <h2 class="details__title">Details</h2>
+                    <article class="details__section" id="characterDetails">
+                        <h3 class="details__subtitle">Look Skajwålker</h3>
+                        <p class="details__info">Height: 172 cm</p>
+                        <p class="details__info">Height: 172 cm</p>
+                        <p class="details__info">Height: 172 cm</p>
+                        <p class="details__info">Height: 172 cm</p>
+                        <p class="details__info">Height: 172 cm</p>
+                        <p class="details__info">Height: 172 cm</p>
+                        <p class="details__info">Height: 172 cm</p>
+                    </article>
+                    <article
+                        class="details__section details__section--dark"
+                        id="homeworldDetails"
+                    >
+                        <h3 class="details__subtitle">Tattoiin</h3>
+                        <p class="details__info">Height: 172 cm</p>
+                        <p class="details__info">Height: 172 cm</p>
+                        <p class="details__info">Height: 172 cm</p>
+                        <p class="details__info">Height: 172 cm</p>
+                        <p class="details__info">Height: 172 cm</p>
+                        <p class="details__info">Height: 172 cm</p>
+                    </article>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

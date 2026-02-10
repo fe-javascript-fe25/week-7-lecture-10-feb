@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@0;1&display=swap');
+
+:root {
+    --yellow: #FFD600;
+    --lightest-grey: #E1DEDE;
+    --light-grey: #C4C4C4;
+    --grey: #8E8E8E;
+    --greyish: #748687;
+    --dark-grey: #535556;
+    --darker-grey: #424242;
+    --darkest-grey: #444444;
+    --black: #000;
+    --white: #fff;
+
+    --font-ropa: 'Ropa Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-ropa);
+}
+
+.header {
+    height: 35vh;
+    background-image: url('../header-background.png');
+    background-size: cover;
+    background-position: center;
+
+    .header__wrapper {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .header__title {
+            font-size: 4rem;
+            color: var(--yellow);
+            font-weight: 400;
+            letter-spacing: 2px;
+            width: 300px;
+        }
+    }
+}
+
+.main {
+    background-color: var(--darker-grey);
+    min-height: 65vh;
+    padding-bottom: 2rem;
+
+    .main__wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        gap: 6rem;
+
+        .main__container {
+            flex: 1;
+            border-radius: 15px 15px 0 0;
+            overflow: hidden;
+            transform: translateY(-2rem);
+        }
+
+        .characters {
+            background-color: var(--light-grey);
+            display: flex;
+            flex-direction: column;
+
+            .characters__title {
+                background-color: var(--dark-grey);
+                color: var(--yellow);
+                text-align: center;
+                font-size: 2rem;
+                font-weight: 400;
+                letter-spacing: 1.5px;
+                padding: 1rem;
+            }
+
+            .characters__list {
+
+                .characters__list-item {
+                    padding: 1rem;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    letter-spacing: 1.5px;
+                    cursor: pointer;
+                }
+
+                .characters__list-item:nth-child(odd) {
+                    background-color: var(--grey);
+                    color: var(--white);
+                }
+
+                .characters__list-item:nth-child(even) {
+                    background-color: var(--lightest-grey);
+                    color: var(--dark-grey);
+                }
+
+                .characters__list-item:hover {
+                    background-color: var(--darkest-grey);
+                    color: var(--white);
+                }
+            }
+
+            .pagination {
+                padding: 1rem;
+                font-size: 2rem;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: auto;
+
+                .pagination__arrow {
+                    transition: all .3s ease;
+                    color: var(--grey);
+                    padding: 0 1rem;
+                }
+
+                .pagination__arrow.active {
+                    cursor: pointer;
+                    color: var(--black);
+                }
+
+                .pagination__arrow.fa-chevron-left.active:hover {
+                    transform: translateX(-.5rem);
+                }
+
+                .pagination__arrow.fa-chevron-right.active:hover {
+                    transform: translateX(.5rem);
+                }
+            }
+        }
+
+        .details {
+            background-color: var(--greyish);
+            display: flex;
+            flex-direction: column;
+
+            .details__title {
+                font-size: 2rem;
+                font-weight: 400;
+                color: var(--yellow);
+                padding: 1rem;
+                text-align: center;
+                letter-spacing: 1.5px;
+            }
+
+            .details__section {
+                flex: 1;
+                background-color: var(--light-grey);
+                color: var(--black);
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+
+                .details__subtitle {
+                    font-size: 2rem;
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                }
+
+                .details__info {
+                    font-size: 1.25rem;
+                }
+            }
+
+            .details__section--dark {
+                background-color: var(--grey);
+                color: var(--white);
+            }
+        }
+    }
+}
